@@ -14,7 +14,7 @@ def gender_features(word):
 feature_sets = [(gender_features(n),g) for (n,g) in names]
 
 classifier = nltk.NaiveBayesClassifier.train(feature_sets)
-name = input('Please enter your name')
+name = input('Please enter your name ')
 
 print(classifier.classify(gender_features(name)))
 print(classifier.show_most_informative_features(5))
