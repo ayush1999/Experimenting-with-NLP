@@ -19,7 +19,7 @@ positive_features = [(feature_extraction(pos),'pos') for pos in positive_vocab]
 negative_features = [(feature_extraction(pos),'neg') for pos in negative_vocab]
 
 train_set = negative_features+ positive_features
-
+print(train_set)
 classifier = nltk.NaiveBayesClassifier.train(train_set)
 
 sentence = input("Enter your sentence: ")
